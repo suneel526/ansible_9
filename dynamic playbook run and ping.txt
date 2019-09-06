@@ -1,0 +1,3 @@
+ansible -i ec2.py -u user suneel tag_Name_ansible_nodes -m ping
+
+ansible-playbook -i ec2.py -u suneel apache1.yml

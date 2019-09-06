@@ -1,0 +1,11 @@
+[Credentials]
+aws_access_key_id= AKIAYJL7EOYBPAJG2KXU
+aws_secret_access_key= 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
+
+ip of nodes: 54.234.137.141
+
+              3.89.98.80
+
+ansible -i ec2.py -u suneel tag_Name_ansible_nodes -m ping
+
+ansible-playbook -i ec2.py -u suneel apache1.yml

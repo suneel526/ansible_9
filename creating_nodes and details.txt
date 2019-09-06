@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+  - name: creating ubuntu nodes
+    ec2:
+     key_name: Docker
+     instance_type: t2.micro
+     image: ami-0e02252797627661a
+     wait: yes
+     region: us-east-1
+     group: suneelSG
+     count: 2
+     vpc_subnet_id: subnet-55473a7b
+     assign_public_ip: yes
+     instance_tags:
+       Name: ansible_nodes
